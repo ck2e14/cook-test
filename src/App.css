@@ -1,38 +1,133 @@
 .App {
   text-align: center;
+  background-color: #e0d3c9;
+  color: rgb(54, 54, 54);
+  height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  font-family: 'Merienda', cursive;
+  font-size: 2vw;
+  font-style: bold;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.logo {
+  position: relative;
+  filter: brightness(.5);
+  width: 30%;
+  top: 5%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.border-box {
+  border: 3px solid rgb(189, 189, 189);
+  height: 50vw;
+  max-height: 60vh;
+  width: 30vw;
+  border-radius: 8px;
+  position: fixed;
+  background-image: url(https://images.unsplash.com/photo-1542282811-943ef1a977c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2704&q=80);
+  background-size: cover;
+  filter: sepia(.2);
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+}
+
+.get-started-msg {
+  position: fixed;
+  top: 10%;
+  font-size: clamp(1rem, 3vmin, 5rem);
+  left: 50%;
+  padding: 1%;
+  transform: translate(-50%);
+  background-color: rgba(226, 211, 198, 0.842);
+  border-radius: 4px;
+}
+
+.form-wrapper {
+  position: fixed;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.outputs-wrapper {
+  position: fixed;
+  bottom: 2%;
+  left: 2%;
+  width: fit-content;
+  max-width: 90%;
+  border-radius:4px;
+  padding: 1%;
+  text-align: left;
+  font-size: 1.25vw;
+  background-color: rgba(0, 0, 0, 0.7);
+  background-color: #e2d3c6c0;
+}
+
+.fade-anim {
+  -webkit-animation: text-focus-in .4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+  animation: text-focus-in .4s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+            filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+            filter: blur(0px);
+    opacity: 1;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* Breakpoints */
+@media (max-height: 750px) { 
+  .logo {
+    left: 20%;
+    top: 30%;
+    width: 20%;
+    position: fixed;
+    transform: rotate(-90deg);
+  }
+  .border-box{
+    top: 50vh;
+    max-height: 90vh;
+  }
+  .form-wrapper {
+    top: 30%;
+  }
+  .outputs-wrapper {
+    font-size: 20px;
+    padding: 0.25%; 
+    height: fit-content;
+  }
+  .outputs-wrapper span {
+    font-size: 15px;
+  }
 }
 
-.App-link {
-  color: #61dafb;
+@media (max-height: 400px) {
+  .outputs-wrapper {
+    font-size: 10px;
+  }
+  .outputs-wrapper span {
+    font-size: 10px;
+  }
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
