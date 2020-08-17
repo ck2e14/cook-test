@@ -48,7 +48,7 @@ function App() {
   return vatValue
   }
 
-  const logoImgUrl = 'https://images.squarespace-cdn.com/content/v1/59eb896cb07869b971fe23dd/1510506171069-ZPKYISWHQ4EHRI6FENXN/ke17ZwdGBToddI8pDm48kEAEWryejG5yeDSfCdJo5_wUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dn5R3BScLNymcvRM6kmGATyCOsz1pntGT8XrSTPY2Mu-CjLISwBs8eEdxAxTptZAUg/COOK-Food-logo.png'
+  const logoImgUrl = 'https://i.imgur.com/8Ttgulb.png'
 
   return (
     <div className="App" id="App">
