@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Form from './Components/Form/Form'
 import OutputField from './Components/OutputField/OutputField';
+import DarkModeToggle from './Components/DarkModeToggle/DarkModeToggle'
 
 function App() {
 
@@ -50,9 +51,11 @@ function App() {
   const logoImgUrl = 'https://images.squarespace-cdn.com/content/v1/59eb896cb07869b971fe23dd/1510506171069-ZPKYISWHQ4EHRI6FENXN/ke17ZwdGBToddI8pDm48kEAEWryejG5yeDSfCdJo5_wUqsxRUqqbr1mOJYKfIPR7LoDQ9mXPOjoJoqy81S2I8N_N4V1vUb5AoIIIbLZhVYy7Mythp_T-mtop-vrsUOmeInPi9iDjx9w8K4ZfjXt2dn5R3BScLNymcvRM6kmGATyCOsz1pntGT8XrSTPY2Mu-CjLISwBs8eEdxAxTptZAUg/COOK-Food-logo.png'
 
   return (
-    <div className="App">
+    <div className="App" id="App">
+
+      <DarkModeToggle />
       
-      <img src={logoImgUrl} alt="logoImage" className="logo "/>
+      <img src={logoImgUrl} alt="logoImage" className="logo" id="logo" />
 
       <div className="border-box">
 
@@ -65,7 +68,7 @@ function App() {
           <Form amount1={input1Amount} amount2={input2Amount} changeInput1={handleInput1Change} changeInput2={handleInput2Change} />
         </div>
 
-        {input1Amount || input2Amount ? 
+        {(input1Amount || input2Amount) ? 
           <div className="outputs-wrapper fade-anim">
 
             <OutputField type={'Total'} amount={calcSubTotal()} />

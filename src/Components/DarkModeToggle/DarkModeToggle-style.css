@@ -1,0 +1,37 @@
+.toggle {
+   position: absolute;
+   top: 50px;
+   right: 50px;
+   background: rgb(197, 197, 197);
+   border: 2px solid rgb(66, 66, 66);
+   width: 45px;
+   height: 20px;
+   cursor: pointer;
+   border-radius: 20px; 
+   transition: 0.1s;
+   font-size: 15px;
+   overflow: visible;
+}
+
+.toggle:before{ 
+   content: "";
+   position: absolute;
+   top: 2px;
+   left: 2px;
+   width: 18px;
+   height: 16px;
+   background: rgb(51, 51, 51);
+   border-radius: 50%;
+   transition: 0.1s;
+}
+
+.toggle.active:before {
+   left: 25px;
+}
+
+#toggle-option-text {
+   font-size: 10px;
+   position: fixed;
+   right: 50px;
+   top: 80px;
+}

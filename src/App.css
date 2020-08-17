@@ -9,6 +9,11 @@
   font-family: 'Merienda', cursive;
   font-size: 2vw;
   font-style: bold;
+  transition: all .25s;
+}
+
+.night {
+  background-color: rgb(31, 31, 31);
 }
 
 .logo {
@@ -16,6 +21,11 @@
   filter: brightness(.5);
   width: 30%;
   top: 5%;
+  transition: all .25s;
+}
+
+.night-logo {
+  filter: brightness(1);
 }
 
 .border-box {
@@ -25,7 +35,7 @@
   width: 30vw;
   border-radius: 8px;
   position: fixed;
-  background-image: url(https://images.unsplash.com/photo-1542282811-943ef1a977c3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2704&q=80);
+  background-image: url(https://i.imgur.com/8UHRuiQ.jpg);
   background-size: cover;
   filter: sepia(.2);
   left: 50%;

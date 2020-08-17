@@ -11,7 +11,7 @@ const OutputField = props => {
    return(
       <div className="output-wrapper">
 
-         {type === 'Total' || 'Grand Total' && 'Rounded '} 
+         {(type === 'Total' || 'Grand Total') && 'Rounded '} 
 
          {type}: £{adjAmount} <span>{vatValue && `(${vatValue}%)` }&nbsp;&nbsp;</span> 
          
