@@ -26,7 +26,7 @@ const DarkModeToggle = () => {
    return(
       <>
       <div className={'toggle '+ toggle} onClick={toggleMode} ></div>
-      {toggle === 'active' ? <div id="toggle-option-text" style={{color: 'white'}}>Night Mode</div> : <div id="toggle-option-text" style={{color: 'rgb(150, 150, 150)'}}>Light Mode</div>}
+      {toggle === 'active' ? <div id="toggle-option-text" style={{color: 'white'}}>Night Mode</div> : <div id="toggle-option-text" style={{color: 'black'}}>Light Mode</div>}
       </>
    )
 }
