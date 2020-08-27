@@ -1,7 +1,3 @@
-This is the repository for Chris Kennedy's solution to Cook's Front-end Developer Technical Test, using React.js.
-
-This site is hosted at 
-
 NETLIFY: https://cook-dev-test.netlify.app/, 
   or 
 CODEPEN: https://codepen.io/ck2e14/full/MWyyvgm
