@@ -8,18 +8,15 @@ const DarkModeToggle = () => {
 
    const toggleMode = () => {
       const appElem = document.getElementById('App')
-      const logoElem = document.getElementById('logo')
-      const toggleTextElem = document.getElementById('toggle-option-text')
+      // const toggleTextElem = document.getElementById('toggle-option-text')
 
       if(toggle === "") {
          setToggle('active')
          appElem.classList.add('night')
-         logoElem.classList.add('night-logo')
       }
       if(toggle === "active"){
          setToggle("")
          appElem.classList.remove('night')
-         logoElem.classList.remove('night-logo')
       } 
    }
 

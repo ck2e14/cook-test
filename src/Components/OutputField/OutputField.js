@@ -5,7 +5,7 @@ const OutputField = props => {
 
    const {type, amount, vatValue} = props
 
-   const adjAmount = (Math.round(amount * 100) / 100).toLocaleString(undefined,
+   const adjAmount = amount.toLocaleString(undefined,
       {'minimumFractionDigits':2,'maximumFractionDigits':2});
 
    return(

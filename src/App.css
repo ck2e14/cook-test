@@ -1,12 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+* {
+  font-weight: bold;
+}
+
 .App {
   text-align: center;
-  background-color: #e0d3c9;
+  background-color: #84b9c9;
   color: rgb(54, 54, 54);
   height: 100vh;
   top: 0;
   left: 0;
   width: 100vw;
-  font-family: 'Merienda', cursive;
+  font-family: 'Roboto', sans-serif !important;
   font-size: 2vw;
   font-style: bold;
   transition: all .25s;
@@ -29,28 +34,26 @@
 }
 
 .border-box {
-  border: 3px solid rgb(189, 189, 189);
   height: 50vw;
-  max-height: 60vh;
+  max-height: 45vh; 
   width: 30vw;
   border-radius: 8px;
   position: fixed;
-  background-image: url(https://i.imgur.com/8UHRuiQ.jpg);
   background-size: cover;
-  filter: sepia(.2);
   left: 50%;
-  top: 60%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
 .get-started-msg {
   position: fixed;
-  top: 10%;
+  top: 20%;
+  width: 100%;
   font-size: clamp(1rem, 3vmin, 5rem);
   left: 50%;
+  color: rgb(63, 63, 63);
   padding: 1%;
   transform: translate(-50%);
-  background-color: rgba(226, 211, 198, 0.842);
   border-radius: 4px;
 }
 
@@ -62,17 +65,16 @@
 }
 
 .outputs-wrapper {
-  position: fixed;
+  position: absolute;
   bottom: 2%;
-  left: 2%;
+  left: 50%;
+  transform: translateX(-50%);
   width: fit-content;
   max-width: 90%;
   border-radius:4px;
   padding: 1%;
   text-align: left;
   font-size: 1.25vw;
-  background-color: rgba(0, 0, 0, 0.7);
-  background-color: #e2d3c6c0;
 }
 
 .fade-anim {
@@ -128,6 +130,76 @@
   }
   .outputs-wrapper span {
     font-size: 15px;
+  }
+}
+
+@media (max-height: 400px) {
+  .outputs-wrapper {
+    font-size: 10px;
+  }
+  .outputs-wrapper span {
+    font-size: 10px;
+  }
+}
+
+/* Breakpoints */
+
+@media (max-height: 900px) {
+  .logo{
+    width: 20%
+  }
+  .output-wrapper {
+    font-size: 15px
+  }
+    .outputs-wrapper span {
+    font-size: 15px;
+  }
+}
+
+
+@media (max-height: 750px) { 
+  .get-started-msg{
+    font-size: 20px
+  }
+  .logo {
+    left: 20%;
+    top: 30%;
+    width: 20%;
+    position: fixed;
+    transform: rotate(-90deg);
+  }
+  .border-box{
+    top: 50vh;
+    max-height: 90vh;
+  }
+  .form-wrapper {
+    top: 30%;
+  }
+  .outputs-wrapper {
+    font-size: 15px;
+    padding: 0.25%; 
+    width: fit-content;
+    height: fit-content;
+  }
+  .outputs-wrapper span {
+    font-size: 15px;
+  }
+  .input-field {
+    /* height: 8vh; */
+    min-height: 30px;
+    height: 8vh;
+    font-size: 25px;
+    max-width: 8vw;
+  }
+}
+
+
+@media (max-height: 700px) { 
+   .outputs-wrapper span {
+      font-size: 10px;
+   }
+  .vat-selector {
+    font-size: 10px
   }
 }
 
