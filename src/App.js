@@ -3,11 +3,13 @@ import "./App.css";
 import Form from "./Components/Form/Form";
 import OutputField from "./Components/OutputField/OutputField";
 import DarkModeToggle from "./Components/DarkModeToggle/DarkModeToggle";
+import WelcomeMsg from "./Components/WelcomeMsg/WelcomeMsg";
 
 function App() {
    const [input1Amount, setInput1Amount] = useState();
    const [input2Amount, setInput2Amount] = useState();
    const [vatValue, setVatValue] = useState(20);
+   const [showWelcome, setShowWelcome] = useState(true);
 
    let val1 = parseFloat(input1Amount);
    let val2 = parseFloat(input2Amount);
@@ -50,6 +52,13 @@ function App() {
    return (
       <div className='App' id='App'>
          <DarkModeToggle />
+
+         {showWelcome && (
+            <>
+               <WelcomeMsg closeMsg={setShowWelcome} />
+               <div className='shader' onClick={() => setShowWelcome()} ></div>
+            </>
+         )}
 
          <div className='border-box'>
             <div className='get-started-msg fade-anim'>Enter some values to get started!</div>

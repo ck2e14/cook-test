@@ -15,6 +15,7 @@
   font-size: 2vw;
   font-style: bold;
   transition: all .25s;
+  overflow: hidden;
 }
 
 .night {

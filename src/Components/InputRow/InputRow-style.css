@@ -23,7 +23,6 @@
 
 @media (max-height: 750px) { 
    .input-field {
-      /* height: 8vh; */
       min-height: 30px;
       height: 8vh;
       font-size: 25px;

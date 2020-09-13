@@ -1,0 +1,41 @@
+.welcomeMsg-container {
+   font-size: 1vw;
+   width: 25%;
+   position: absolute;
+   top: 40%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 999;
+   background: rgb(92, 92, 92);
+   color: rgb(173, 173, 173);
+   border-radius: .5vw;
+}
+
+.shader {
+   width: 100vw;
+   height: 100vh;
+   background: rgba(0, 0, 0, 0.8);
+   z-index: 998;
+   position: fixed;
+   top: 0;
+   left: 0;
+}
+
+.welcomeMsg-content {
+   position: relative;
+   padding: 3%;
+}
+
+.close-me {
+   position: absolute;
+   right: -5%;
+   margin-top: -5%;
+   color: white;
+   font-size: 2vw;
+   cursor: pointer;
+   transition: all .25s;
+}
+
+.close-me:hover {
+   color: rgb(192, 92, 92);
+}
